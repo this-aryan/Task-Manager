@@ -1,0 +1,48 @@
+.sidebar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+.sidebar li:first-child:hover {
+  background-color: transparent; /* Reset hover effect for the first li */
+}
+
+.sidebar li:first-child:hover i {
+  background-color: transparent; /* Ensure the bars icon itself has no hover effect */
+}
+
+.sidebar i {
+  margin-right: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background-color: #0056b3; /* Darker background color on hover for links */
+}

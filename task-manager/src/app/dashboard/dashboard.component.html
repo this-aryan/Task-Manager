@@ -1,0 +1,46 @@
+<div class="dashboard-container">
+  <div class="header">
+    <div class="header-right">
+      <button class="add-task-btn" (click)="openAddTaskPopup()"><strong><i class="fa-solid fa-plus"></i> Add Task</strong></button>
+    </div>
+  </div>
+  <div class="table-container">
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Description</th>
+          <th>Completion Date</th>
+          <th>Priority</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.name }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.dueDate | date: 'yyyy-MM-dd' }}</td>
+          <td>{{ task.priority }}</td>
+          <td class="actions">
+            <button class="edit-btn" (click)="openEditTaskPopup(task)"><i class="fas fa-pen"></i></button>
+            <button class="complete-btn" (click)="onMarkComplete(task)"><i class="fas fa-circle-check"></i></button>
+            <button class="delete-btn" (click)="confirmDeleteTask(task.id)"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<app-add-task-popup 
+  *ngIf="showAddTaskPopup" 
+  (close)="closeAddTaskPopup()" 
+  (save)="addTask($event)">
+</app-add-task-popup>
+
+<app-edit-task-popup 
+  *ngIf="showEditTaskPopup" 
+  [taskToEdit]="taskToEdit" 
+  (close)="closeEditTaskPopup()" 
+  (edit)="editTask($event)">
+</app-edit-task-popup>

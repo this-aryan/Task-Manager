@@ -1,0 +1,45 @@
+.notification-container {
+  padding: 50px;
+}
+
+.table-container {
+  max-width: 800px; /* Set a maximum width for the table */
+  margin: 0 auto; /* Center the table horizontally */
+  overflow-x: auto; /* Add horizontal scroll if content overflows */
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #f2f2f2;
+}
+
+.task-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.completed {
+  color: green; /* Green color for completed tasks */
+}
+
+.pending {
+  color: red; /* Red color for pending tasks */
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #007bff; /* Adjust color as needed */
+  margin-right: 5px; /* Add space between buttons */
+}

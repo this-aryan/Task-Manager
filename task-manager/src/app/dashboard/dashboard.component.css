@@ -1,0 +1,114 @@
+.dashboard-container {
+  padding: 50px;
+  margin-left: 190px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+  width: calc(100% - 190px); /* Adjust for sidebar width */
+  margin-left: 190px; /* Adjust for sidebar width */
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-task-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th, .task-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.task-table th {
+  background-color: #f2f2f2;
+}
+
+.task-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff; /* Adjust color as needed */
+  margin-right: 5px; /* Add space between buttons */
+}
+
+.complete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color:green; /* Adjust color as needed */
+  margin-right: 5px; /* Add space between buttons */
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color:red; /* Adjust color as needed */
+  margin-right: 5px; /* Add space between buttons */
+}
+
+.edit-btn i,
+.complete-btn i,
+.delete-btn i {
+  font-size: 18px;
+}
+
+/* Add this CSS */
+.task-table td.actions {
+  white-space: nowrap; /* Prevent buttons from wrapping */
+  text-align: center; /* Center align buttons horizontally */
+}
+
+.task-table td.actions button {
+  display: inline-block;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 2px; /* Add some margin between buttons */
+}
+
+.task-table td.actions .edit-btn {
+  color: rgb(0, 110, 255);
+}
+
+.task-table td.actions .complete-btn {
+  color: green;
+}
+
+.task-table td.actions .delete-btn {
+  color: red;
+}
+
+.task-table td.actions i {
+  font-size: 18px; /* Adjust the icon size as needed */
+}
+
+.table-container {
+  max-width: 1200px; /* Set a maximum width for the table */
+  margin: 0 auto; /* Center the table horizontally */
+  overflow-x: auto; /* Add horizontal scroll if content overflows */
+}

@@ -1,0 +1,28 @@
+<div class="popup-container">
+    <div class="popup-content">
+      <h3>Add Task</h3>
+      <form (ngSubmit)="onSave()">
+        <label for="name">Task Name</label>
+        <input type="text" id="name" [(ngModel)]="task.name" name="name" required>
+  
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="task.description" name="description" required></textarea>
+  
+        <label for="dueDate">Due Date</label>
+        <input type="date" id="dueDate" [(ngModel)]="task.dueDate" name="dueDate" required>
+  
+        <label for="priority">Priority</label>
+        <select id="priority" [(ngModel)]="task.priority" name="priority" required>
+          <option value="High">High</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Low">Low</option>
+        </select>
+  
+        <div class="buttons">
+          <button type="button" (click)="onCancel()">Cancel</button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+</div>
+  

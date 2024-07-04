@@ -1,0 +1,28 @@
+<div class="notification-container">
+  <div class="table-container">
+    <table class="task-table">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Priority</th>
+          <th>Completion Date</th>
+          <th>Status</th>
+          <th>Revert</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.name }}</td>
+          <td>{{ task.priority }}</td>
+          <td>{{ task.dueDate | date: 'longDate'}}</td>
+          <td [ngClass]="{ 'completed': task.completed, 'pending': !task.completed }">
+            {{ task.completed ? 'Completed' : 'Pending' }}
+          </td>
+          <td>
+            <button *ngIf="task.completed" (click)="reverseStatus(task)"><i class="fa-solid fa-retweet"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
