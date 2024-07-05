@@ -17,6 +17,8 @@ export class AddTaskPopupComponent {
     priority: 'Moderate'
   };
 
+  priorities: string [] = ['High', 'Moderate', 'Low'];
+
   onCancel() {
     this.close.emit();
   }

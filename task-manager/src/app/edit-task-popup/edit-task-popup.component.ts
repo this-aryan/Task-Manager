@@ -19,6 +19,8 @@ export class EditTaskPopupComponent implements OnChanges{
     priority: 'Moderate'
   };
 
+  priorities: string [] = ['High', 'Moderate', 'Low'];
+
   ngOnChanges(changes: SimpleChanges) {
     if (changes['taskToEdit'] && changes['taskToEdit'].currentValue) {
       this.task = { ...changes['taskToEdit'].currentValue };
