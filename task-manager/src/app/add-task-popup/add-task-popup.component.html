@@ -13,7 +13,9 @@
   
         <label for="priority">Priority</label>
         <select id="priority" [(ngModel)]="task.priority" name="priority" required>
-          <option *ngFor="let priority of priorities" [value]="priority">{{ priority }}</option>
+          @for (priority of priorities; track $index) {
+            <option [value]="priority">{{ priority }}</option>
+          }
         </select>
   
         <div class="buttons">
